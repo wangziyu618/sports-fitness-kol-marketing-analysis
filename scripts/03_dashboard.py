@@ -133,7 +133,8 @@ fig.update_layout(
     font=dict(family="Microsoft YaHei, Arial", size=12))
 
 html_path = DASH_DIR / "sports_fitness_kol_dashboard.html"
-pio.write_html(fig, html_path, include_plotlyjs="cdn", full_html=True,
+# 自包含模式：将 plotly.js 内嵌进 HTML（约 4MB），不依赖 CDN，离线双击即可渲染
+pio.write_html(fig, html_path, include_plotlyjs="inline", full_html=True,
                config={"displaylogo": False})
 
 # 插入文档级 <title>（plotly write_html 默认不生成）
