@@ -21,6 +21,14 @@
 
 > 数据质量说明：分析前曾评估另一个候选公开数据集，因其互动指标近乎恒定（播放量集中在 9.7k-10.5k、点赞 1.3k-1.7k，疑为合成数据）而排除，最终全部分析仅使用上述一个数据源。
 
+## 在线查看看板
+
+GitHub Pages 在线地址（浏览器直接打开，无需下载）：
+
+https://wangziyu618.github.io/sports-fitness-kol-marketing-analysis/dashboard/sports_fitness_kol_dashboard.html
+
+> 注意：不要用 GitHub 仓库页里的 raw 地址打开 HTML（会显示源码），用上面这个 Pages 地址。
+
 ## 目录结构
 
 ```
