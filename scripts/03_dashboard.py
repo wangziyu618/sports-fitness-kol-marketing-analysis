@@ -67,6 +67,7 @@ CONTENT_CN = {"Duet": "Duet 合拍", "Stitch": "Stitch 拼接",
 def base_layout(height, xtitle=None, ytitle=None):
     return dict(
         height=height, margin=dict(l=8, r=24, t=16, b=8),
+        dragmode=False,                      # 禁用拖拽框选/平移（不出白框）
         paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor=BG_PLOT,
         font=dict(family=FONT_STACK, size=11.5, color=TXT_MAIN),
         hoverlabel=HOVER,
