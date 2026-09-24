@@ -1,0 +1,14 @@
+# 排除：评估后排除的合成数据集（指标近乎恒定，见报告 2.1）
+data/raw/social_media_dataset.csv
+data/raw/sponsorship.zip
+
+# 排除：原始压缩包（保留解压后的 CSV 即可复现）
+data/raw/engagement.zip
+
+# 排除：可再生的 SQLite 数据库（运行 scripts/02_sql_analysis.py 重建）
+data/sports_kol.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
