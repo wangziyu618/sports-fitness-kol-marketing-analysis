@@ -339,10 +339,11 @@ h1 {{ font-size:52px; font-weight:700; letter-spacing:-.5px; line-height:1.08; m
 .chart-card {{ background:{BG_CARD}; border:1px solid {BORDER}; border-radius:18px; padding:22px 22px 12px;
   transition:transform .18s ease, box-shadow .18s ease; }}
 .chart-card:hover {{ transform:translateY(-2px); box-shadow:0 10px 30px rgba(0,0,0,.05); }}
-.chart-head {{ display:flex; align-items:baseline; justify-content:space-between; gap:16px;
-  padding:0 6px 4px; border-bottom:1px solid #f2f2f7; margin-bottom:10px; }}
+.chart-head {{ display:flex; align-items:baseline; justify-content:space-between; gap:10px 16px;
+  flex-wrap:wrap; padding:0 6px 4px; border-bottom:1px solid #f2f2f7; margin-bottom:10px; }}
 .chart-title {{ font-size:16px; font-weight:600; color:{TXT_MAIN}; }}
-.chart-desc {{ font-size:12px; color:{TXT_WEAK}; text-align:right; }}
+.chart-desc {{ font-size:12px; color:{TXT_WEAK}; text-align:right; white-space:normal;
+  line-height:1.5; min-width:0; }}
 .chart-body {{ width:100%; }}
 /* ---------- Footer ---------- */
 footer {{ max-width:1000px; margin:56px auto 0; padding-top:24px; border-top:1px solid {BORDER};
@@ -353,6 +354,7 @@ footer b {{ color:{TXT_SUB}; }}
   nav {{ padding:12px 24px; }}
   nav .links {{ gap:18px; }}
   h1 {{ font-size:42px; }}
+  .kpi-grid {{ grid-template-columns:repeat(2,1fr); }}
   .chart-grid {{ grid-template-columns:1fr; }}
 }}
 @media (max-width:760px) {{
