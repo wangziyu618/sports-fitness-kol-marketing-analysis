@@ -2,7 +2,7 @@
 
 > Sports / Fitness / Health KOL Marketing Performance & Budget Allocation Analysis
 
-一个基于公开数据的全链路营销分析项目：**Python 数据清洗 → SQL 多维分析 → Plotly 交互式决策看板 → 纯佣制 ROI 情景模型 → 策略报告**。面向运动品牌出海场景，回答「KOL 预算应该怎么分配」。
+一个基于公开数据的全链路营销分析项目：**Python 数据清洗 → SQL 多维分析 → Plotly 交互式决策看板 → 佣金制 ROI 情景模型 → 策略报告**。面向运动品牌出海场景，回答「KOL 预算应该怎么分配」。
 
 ## 项目动机
 
@@ -33,7 +33,7 @@ sports-fitness-kol-marketing-analysis/
 │   ├── 02_sql_analysis.py          # SQLite 建表 + 9 个业务查询 + 结果导出
 │   ├── queries.sql                 # 同一套 SQL 查询脚本（可独立审阅/复现）
 │   ├── 03_dashboard.py             # Plotly 交互式决策看板生成
-│   └── 04_roi_scenario_model.py    # 纯佣制 ROI 情景模型 + 预算分配模拟
+│   └── 04_roi_scenario_model.py    # 佣金制 ROI 情景模型 + 预算分配模拟
 ├── dashboard/
 │   └── sports_fitness_kol_dashboard.html   # 交互式看板（浏览器打开）
 ├── sql_results/                    # 9 个 SQL 查询结果 + 情景模型输出（CSV）
@@ -59,12 +59,18 @@ python scripts/04_roi_scenario_model.py  # 模型：产出 scenario_model.csv
 
 1. **TikTok 断层领先**：运动健康垂类平均互动率 22.96%，为 Instagram（6.51%）的 3.5 倍；Top10 互动榜全部来自 TikTok。
 2. **小体量达人效率更高**：Micro 32.5% > Mid-tier 11.5% > Macro 3.4%；Duet/Stitch/Video 等互动型内容形式显著优于图文。
-3. **$100K 预算建议**：51% 押注 TikTok（Macro 放量 + Micro/Mid 测试），28% 给 Instagram（侧重 Micro）；纯佣制下 ROI 比率由佣金率锁定，核心杠杆是达人筛选质量与 GMV 产出效率。
+3. **$100K 预算建议**：51% 押注 TikTok（Macro 放量 + Micro/Mid 测试），28% 给 Instagram（侧重 Micro）；佣金制下 ROI 比率由佣金率锁定，核心杠杆是达人筛选质量与 GMV 产出效率。
 4. 关键结论经 StarNgage 行业基准交叉验证，方向一致。
 
-## 简历可用摘要
+## 简历可用摘要（中英双语）
 
-> Built a full-pipeline KOL marketing analysis on a 5,000-post public social dataset, filtering 1,191 sports/fitness/health posts; found TikTok's avg engagement rate (22.96%) 3.5x higher than Instagram's in this vertical, and micro-influencers outperform macro by ~10x; delivered a $100K budget-allocation model under a pure-commission ROI framework, cross-validated against industry benchmarks.
+**English**
+
+> Built a full-pipeline KOL marketing analysis on a 5,000-post public social dataset, filtering 1,191 sports/fitness/health posts; found TikTok's avg engagement rate (22.96%) 3.5x higher than Instagram's in this vertical, and micro-influencers outperform macro by ~10x; delivered a $100K budget-allocation model under a commission-based ROI framework, cross-validated against industry benchmarks.
+
+**中文对照**
+
+> 基于 5,000 条公开社媒帖完成全链路 KOL 营销分析，聚焦 1,191 条运动健康垂类内容；发现该垂类下 TikTok 平均互动率（22.96%）为 Instagram 的 3.5 倍，Micro 达人互动效率约为 Macro 的 10 倍；在佣金制 ROI 框架下产出 $100K 预算分配模型，并与行业基准交叉验证。
 
 ## 声明
 
