@@ -135,4 +135,12 @@ fig.update_layout(
 html_path = DASH_DIR / "sports_fitness_kol_dashboard.html"
 pio.write_html(fig, html_path, include_plotlyjs="cdn", full_html=True,
                config={"displaylogo": False})
+
+# 插入文档级 <title>（plotly write_html 默认不生成）
+html = html_path.read_text(encoding="utf-8")
+html = html.replace(
+    '<meta charset="utf-8" />',
+    '<meta charset="utf-8" />\n    <title>海外运动健康垂类 KOL 营销决策看板</title>',
+    1)
+html_path.write_text(html, encoding="utf-8")
 print(f"[完成] 看板已生成: {html_path} ({html_path.stat().st_size/1024:.0f} KB)")

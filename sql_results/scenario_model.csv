@@ -1,4 +1,4 @@
-Platform,Influencer_Tier,n_posts,avg_er,median_views,cvr_scaled,est_gmv_per_post,est_cost_per_post,est_gmv_per_1k_usd,roi_pure_commission,comm_per_post,weight,budget_alloc
+Platform,Influencer_Tier,n_posts,avg_er,median_views,cvr_scaled,est_gmv_per_post,est_cost_per_post,est_gmv_per_1k_usd,roi_commission,comm_per_post,weight,budget_alloc
 TikTok,Micro,19,81.75,215087,0.07627197711063195,984306.6444476696,1720.696,572039.8283297396,5.0,196861.32888953394,10868756.738265052,21012.723300347003
 TikTok,Mid-tier,10,57.54,260042,0.05368427599933654,837609.9899651683,2080.336,402632.06999502407,5.0,167521.99799303367,4026320.6999502406,7784.143561577122
 Instagram,Micro,25,24.42,24990,0.022783629125891526,34161.77351136175,199.92,170877.21844418644,5.0,6832.354702272351,4271930.461104661,8258.984435771348

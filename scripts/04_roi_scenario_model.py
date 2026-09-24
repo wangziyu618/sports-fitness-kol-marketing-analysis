@@ -2,12 +2,12 @@
 """
 04_roi_scenario_model.py
 ========================
-纯佣制 ROI 情景模型与预算分配模拟
+佣金制 ROI 情景模型与预算分配模拟
 
 背景：公开数据不含真实投放成本与销售额，因此本脚本构建「透明假设 + 情景模拟」模型，
 所有假设参数集中可调，输出结果只用于相对比较（segment 之间的效率排序），
 不声称绝对预测。核心逻辑：
-  - 纯佣制下 ROI = GMV / 佣金，佣金率固定时 ROI 恒为 1/佣金率，
+  - 佣金制下 ROI = GMV / 佣金，佣金率固定时 ROI 恒为 1/佣金率，
     因此真正的决策变量是「每千元投入能带来的 GMV」与「每帖 GMV 潜力」。
   - 基于 SQL 结果中的分平台×层级中位播放量，按统一假设估算 GMV 与成本，
     给出预算分配权重。
@@ -49,7 +49,7 @@ df["cvr_scaled"] = CVR * (df["avg_er"] / ref_er)
 df["est_gmv_per_post"] = df["median_views"] * df["cvr_scaled"] * AOV          # 单帖 GMV 潜力
 df["est_cost_per_post"] = df["median_views"] / 1000 * CPM                      # 单帖成本
 df["est_gmv_per_1k_usd"] = df["est_gmv_per_post"] / df["est_cost_per_post"] * 1000  # 每千美元 GMV
-df["roi_pure_commission"] = 1 / COMMISSION                                     # 纯佣 ROI 恒值（公式层面）
+df["roi_commission"] = 1 / COMMISSION                                      # 佣金制 ROI 恒值（公式层面）
 df["comm_per_post"] = df["est_gmv_per_post"] * COMMISSION                      # 单帖佣金支出
 
 # 预算分配权重：以「每千美元 GMV」× 样本量 作为权重（兼顾效率与可执行规模）
@@ -58,7 +58,7 @@ df["budget_alloc"] = BUDGET * df["weight"] / df["weight"].sum()
 
 df = df.sort_values("est_gmv_per_1k_usd", ascending=False).reset_index(drop=True)
 
-print("===== 纯佣制情景模型：分平台×层级（假设 CPM=$8, CVR随互动率缩放, AOV=$60, 佣金20%） =====")
+print("===== 佣金制情景模型：分平台×层级（假设 CPM=$8, CVR随互动率缩放, AOV=$60, 佣金20%） =====")
 print(df.round(2).to_string(index=False))
 
 # 敏感性：CVR 与 AOV 变化对「每千美元 GMV」的影响（以效率最优段为例）

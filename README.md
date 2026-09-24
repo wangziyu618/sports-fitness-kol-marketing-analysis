@@ -6,18 +6,20 @@
 
 ## 项目动机
 
-作者背景：TikTok 达人 BD 实习生（运动健康垂类、纯佣金制），目标方向为运动品牌海外数字营销 / 全球 KOL 营销数据分析岗位。本项目旨在证明：
-- 能独立完成「KOL 营销效果分析 → 预算分配决策」的全链路工作；
-- 具备 Python / SQL / 数据可视化 / 商业策略四项岗位核心能力；
-- 懂运动健康垂类内容生态与达人分层运营逻辑。
+这是一个**独立的营销数据分析项目**，与任何实习经历无关。围绕「运动健康垂类 KOL 营销效果如何、预算应该怎么分配」这一商业问题，基于公开社媒数据完成从数据清洗到决策建议的全链路分析，目标是：
+- 完整呈现「数据处理 → 多维分析 → 可视化 → 情景建模 → 策略建议」的分析闭环；
+- 锻炼 Python / SQL / 数据可视化 / 商业策略四项数据分析核心能力；
+- 理解运动健康垂类内容生态、平台差异与达人分层运营逻辑。
 
 ## 数据源
 
 | 数据 | 说明 |
 |---|---|
-| [Social Media Engagement Dataset](https://www.kaggle.com/datasets/aviral342/social-media-engagement-dataset)（Kaggle） | **采用的主数据**。5,000 条社媒帖，12 个内容垂类、6 个平台，含互动率、播放、粉丝量、达人层级、内容形式。其中运动健康垂类（Sports+Fitness+Health）1,191 帖 |
-| Social Media Sponsorship & Engagement Dataset（Kaggle） | **评估后排除**。52,214 条，但互动指标近乎恒定（播放量集中于 9.7k-10.5k、点赞 1.3k-1.7k），疑为合成数据，无法支撑有效分析。排除决策记录于 `scripts/01_clean_and_prepare.py` 与策略报告 |
-| StarNgage Fitness Creator Engagement Benchmarks | 行业基准，用于交叉验证（印尼 / 马来西亚健身垂类创作者报告） |
+| [Social Media Engagement Dataset](https://www.kaggle.com/datasets/aviral342/social-media-engagement-dataset)（Kaggle） | **唯一数据源**。5,000 条社媒帖，覆盖 12 个内容垂类、6 个平台（Instagram / TikTok / YouTube / Facebook / Twitter / LinkedIn），含互动率、播放、粉丝量、达人层级、内容形式等字段；其中运动健康垂类（Sports + Fitness + Health）1,191 帖 |
+
+**外部参考基准**（不是数据源，仅用于结论交叉验证）：StarNgage Fitness Creator Engagement Benchmarks（健身垂类创作者互动率基准报告）。
+
+> 数据质量说明：分析前曾评估另一个候选公开数据集，因其互动指标近乎恒定（播放量集中在 9.7k-10.5k、点赞 1.3k-1.7k，疑为合成数据）而排除，最终全部分析仅使用上述一个数据源。
 
 ## 目录结构
 

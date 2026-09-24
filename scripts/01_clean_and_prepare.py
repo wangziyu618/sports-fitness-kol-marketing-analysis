@@ -20,7 +20,7 @@ import numpy as np
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / "data" / "raw" / "engagement" / "social_media_engagement_dataset.csv"
+RAW = ROOT / "data" / "raw" / "social_media_engagement_dataset.csv"
 OUT_DIR = ROOT / "data" / "processed"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
